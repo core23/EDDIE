@@ -1,0 +1,112 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "6d6cbf99c42a0b52e39933940abc0aa8",
+    "packages": [],
+    "packages-dev": [
+        {
+            "name": "bamarni/composer-bin-plugin",
+            "version": "v1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bamarni/composer-bin-plugin.git",
+                "reference": "62fef740245a85f00665e81ea8f0aa0b72afe6e7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bamarni/composer-bin-plugin/zipball/62fef740245a85f00665e81ea8f0aa0b72afe6e7",
+                "reference": "62fef740245a85f00665e81ea8f0aa0b72afe6e7",
+                "shasum": ""
+            },
+            "require": {
+                "composer-plugin-api": "^1.0"
+            },
+            "require-dev": {
+                "composer/composer": "dev-master",
+                "symfony/console": "^2.5 || ^3.0"
+            },
+            "type": "composer-plugin",
+            "extra": {
+                "class": "Bamarni\\Composer\\Bin\\Plugin",
+                "branch-alias": {
+                    "dev-master": "1.1-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Bamarni\\Composer\\Bin\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "time": "2017-09-11T13:13:58+00:00"
+        },
+        {
+            "name": "sllh/composer-lint",
+            "version": "v1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Soullivaneuh/composer-lint.git",
+                "reference": "0cde01dcb0ba3f40ad5fd6e3eb14266802faf574"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Soullivaneuh/composer-lint/zipball/0cde01dcb0ba3f40ad5fd6e3eb14266802faf574",
+                "reference": "0cde01dcb0ba3f40ad5fd6e3eb14266802faf574",
+                "shasum": ""
+            },
+            "require": {
+                "composer-plugin-api": "^1.0",
+                "php": "^5.3 || ^7.0"
+            },
+            "require-dev": {
+                "composer/composer": "^1.0",
+                "symfony/phpunit-bridge": "^2.7.4 || ^3.0"
+            },
+            "type": "composer-plugin",
+            "extra": {
+                "class": "SLLH\\ComposerLint\\LintPlugin",
+                "branch-alias": {
+                    "dev-master": "1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "SLLH\\ComposerLint\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sullivan SENECHAL",
+                    "email": "soullivaneuh@gmail.com"
+                }
+            ],
+            "description": "Extends the composer validate command with extra rules",
+            "keywords": [
+                "composer",
+                "lint",
+                "plugin",
+                "validate"
+            ],
+            "time": "2018-01-05T12:46:28+00:00"
+        }
+    ],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": {
+        "php": "^5.6 || ^7.1"
+    },
+    "platform-dev": []
+}
