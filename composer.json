@@ -17,11 +17,21 @@
         }
 	},
     "scripts": {
+        "lint": [
+            "@composer validate",
+            "@vendor/bin/php-cs-fixer fix --verbose"
+        ],
+        "phpstan": [
+            "@vendor/bin/phpstan analyse -c phpstan.neon -l 7 src tests"
+        ],
         "post-install-cmd": [
             "@composer bin all install --ansi"
         ],
         "post-update-cmd": [
             "@composer bin all update --ansi"
+        ],
+        "test": [
+            "@vendor/bin/phpunit -c phpunit.xml.dist --coverage-clover build/logs/clover.xml"
         ]
 	}
 }

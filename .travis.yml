@@ -1,0 +1,41 @@
+language: php
+
+php:
+  - 7.1
+  - 7.2
+  - nightly
+
+sudo: false
+
+cache:
+  directories:
+    - $HOME/.composer/cache
+
+env:
+  global:
+    - PATH="$HOME/.composer/vendor/bin:$PATH"
+    - TARGET=test
+
+stages:
+    - lint
+    - test
+
+matrix:
+  fast_finish: true
+  include:
+    - stage: lint
+      php: 7.2
+      env: TARGET=lint
+    - stage: lint
+      php: 7.2
+      env: TARGET=phpstan
+    - stage: test
+      php: 7.1
+      env: COMPOSER_FLAGS="--prefer-lowest"
+  allow_failures:
+    - php: nightly
+
+install:
+ - composer update --prefer-dist --no-interaction $COMPOSER_FLAGS
+
+script: composer $TARGET
